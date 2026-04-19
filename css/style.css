@@ -1,7 +1,7 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
-  padding-top: 60px; /* 🔥 altura del navbar aprox */
 }
 
 html,
@@ -11,22 +11,22 @@ body {
 
 /*empuja el footer abajo */
 footer {
-  margin-top: auto;  
+  margin-top: auto;
 }
 
 /* BARRA DE NAVEGACION */
 .navbar {
   display: flex;
-  justify-content: space-around; /* separa izquierda-centro-derecha */
+  justify-content: space-around; /* Separa izquierda-centro-derecha */
   align-items: center;
-  padding: 4px 10px;
   background-color: rgba(251, 104, 132, 0.85);
   backdrop-filter: blur(10px);
-  position: fixed;/* lo fija en pantalla */
+  position: sticky;
+  top: 0;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* se asegura que esté por encima de todo */
+  z-index: 1000; /* Asegura que esté por encima de todo */
 }
 
 /* LOGO */
@@ -39,7 +39,7 @@ footer {
 .navbar-menu {
   list-style: none;
   display: flex;
-  gap: 60px; /* espacio entre items */
+  gap: 60px;
   padding: 0;
   margin: 0;
 }
@@ -82,13 +82,32 @@ footer {
   color: #1d3557;
 }
 
+/* BANNER */
+.main-banner {
+  width: 100%;
+  height: 90vh;
+  background: linear-gradient(135deg, #a8dadc, #f1faee);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+}
+
+.main-banner img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+/* INICIO PRESENTACION*/
 .inicio {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 60px;
   padding: 100px 60px;
-  background: linear-gradient(135deg, #f965bb, #f8a5c2);
+  background: linear-gradient(135deg, #e643a2, #efaac2);
 }
 
 /* IMAGEN IZQUIERDA */
@@ -97,7 +116,7 @@ footer {
   height: 350px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* CONTENIDO DERECHA */
@@ -141,22 +160,6 @@ footer {
   transform: scale(1.05);
 }
 
-/* BANNER */
-.main-banner {
-  width: 100%;
-  height: 80vh;
-  background: linear-gradient(135deg, #a8dadc, #f1faee);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-banner img {
-  width: 80%;
-  height: 95%;
-  border-radius: 20px;
-}
-
 /* FOOTER */
 footer {
   background-color: #ff914c;
@@ -165,17 +168,18 @@ footer {
 
 /* CONTENEDOR */
 .footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
+  
+  gap: 50px;
   padding: 20px;
-  max-width: 1200px;
-  margin: auto; /* centra todo el footer */
 }
 
 /* IZQUIERDA */
 .inst-ubicacion {
-  justify-self: start;
+  justify-self: center;
   text-align: left;
 }
 
@@ -204,7 +208,7 @@ footer {
 
 /* DERECHA */
 .contact {
-  justify-self: end;
+  justify-self: center;
   display: flex;
   gap: 12px;
   list-style: none;
@@ -213,6 +217,12 @@ footer {
 }
 
 .contact img {
+  box-shadow:
+    5px 5px 0px 0px rgba(255, 0, 0, 1),
+    10px 10px 0px 0px rgba(255, 136, 0, 1),
+    15px 15px 0px 0px rgba(255, 255, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
   width: 50px;
   height: 50px;
   transition:
@@ -226,5 +236,3 @@ footer {
   transform: scale(1.15);
   opacity: 0.8;
 }
-
-
