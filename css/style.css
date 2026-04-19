@@ -166,6 +166,10 @@ footer {
   border-top: 3px solid #e76f51;
 }
 
+footer p{
+  text-align: center;
+}
+
 /* CONTENEDOR */
 .footer-content {
   display: flex;
