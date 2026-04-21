@@ -30,7 +30,8 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que esté por encima de todo */
+  z-index: 1000;
+  padding: 0%; 
 }
 
 /* LOGO */
