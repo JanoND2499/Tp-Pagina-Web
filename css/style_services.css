@@ -10,3 +10,10 @@
 .gallery-img:hover {
   transform: scale(1.05);
 }
+
+.about_main h1 {
+  padding: 20px;
+  margin: 22px;
+  font-size: 32px;
+  font-weight: bold;
+}
